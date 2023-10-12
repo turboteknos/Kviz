@@ -10,12 +10,12 @@ namespace Kviz
     {
         string TippelosFajlnev, ValasztosFajlnev;
         kerdesBank k;
-       
-        public FajlbolFeltolto(kerdesBank kerdes)
+
+        public FajlbolFeltolto(kerdesBank k)
         {
-            k = kerdes;
-           
-          
+            this.k = k;
+            TippelosFeltolt();
+            ValasztosFeltolt();
         }
 
         private void TippelosFeltolt()
@@ -25,15 +25,17 @@ namespace Kviz
             string sor;
             while (!sr.EndOfStream)
             {
-                sor=sr.ReadLine();
+                //example line for tippeloskerdesek.txt: matematika;1;Hány oldala van egy paralelogrammának?;4;0
+                //split line by ';' and add to kerdesBank.KerdesFelvesz()
+                sor = sr.ReadLine();
                 string[] adatok = sor.Split(';');
+                //        public Tippelos(byte nehezseg,string kategoria, string kerdesSzoveg,  float megoldas, float tolerancia)
+                k.KerdesFelvesz(new Tippelos(adatok[0], byte.Parse(adatok[1]), adatok[2], float.Parse(adatok[3]), float.Parse(adatok[4])));
 
-                k.KerdesFelvesz(new Tippelos(adatok[0], byte.Parse(adatok[1]), adatok[2], byte.Parse(adatok[3]), float.Parse(adatok[4])));
-                
 
-                
-            }   
-           
+
+            }
+
 
         }
 

@@ -33,9 +33,10 @@ namespace Kviz
 
         public List<string> Tartalom()
         {
-           
+          
             return new List<string>() { kerdesSzoveg };
         }
+        
     }
 
 

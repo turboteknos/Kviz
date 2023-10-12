@@ -10,7 +10,7 @@ namespace Kviz
     {
         FajlbolFeltolto f;
         List<IKerdes> feladatok;
-        public kerdesBank(FajlbolFeltolto f)
+        public kerdesBank()
         {
             feladatok=new List<IKerdes>();
             f= new FajlbolFeltolto(this);
@@ -22,12 +22,17 @@ namespace Kviz
 
 
         }
+
         public void feladatokKiirasa()
         {
             foreach (IKerdes k in feladatok)
             {
-                Console.WriteLine(k.Tartalom());
+                foreach (string s in k.Tartalom())
+                {
+                    Console.WriteLine(s);
+                }
             }
-        }   
+        }
+        
     }
 }

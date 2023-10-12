@@ -36,7 +36,7 @@ namespace Kviz
         {
             List<string>x =new List<string>();
             x.Add(kerdesSzoveg);
-            x.AddRange(valaszok);
+            //x.AddRange(valaszok);
             return x;
         }
     }

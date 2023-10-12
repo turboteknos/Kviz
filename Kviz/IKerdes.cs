@@ -16,12 +16,8 @@ namespace Kviz
 
         public bool Ellenorzes(string tipp);
 
-        public List<string> Tartalom()
-        {
-            List<string> tartalom = new List<string>();
-            return tartalom;
-
-        }
+        public List<string> Tartalom();
+       
 
 
     }

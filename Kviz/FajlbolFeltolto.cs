@@ -13,6 +13,8 @@ namespace Kviz
 
         public FajlbolFeltolto(kerdesBank k)
         {
+            TippelosFajlnev = "tippeloskerdesek.txt";
+            ValasztosFajlnev = "kerdesek.txt";
             this.k = k;
             TippelosFeltolt();
             ValasztosFeltolt();
@@ -20,16 +22,14 @@ namespace Kviz
 
         private void TippelosFeltolt()
         {
-            FileStream fs = new FileStream("tippeloskerdesek.txt", FileMode.Open);
+            FileStream fs = new FileStream(TippelosFajlnev, FileMode.Open);
             StreamReader sr = new StreamReader(fs);
             string sor;
             while (!sr.EndOfStream)
             {
-                //example line for tippeloskerdesek.txt: matematika;1;Hány oldala van egy paralelogrammának?;4;0
-                //split line by ';' and add to kerdesBank.KerdesFelvesz()
+               
                 sor = sr.ReadLine();
                 string[] adatok = sor.Split(';');
-                //        public Tippelos(byte nehezseg,string kategoria, string kerdesSzoveg,  float megoldas, float tolerancia)
                 k.KerdesFelvesz(new Tippelos(adatok[0], byte.Parse(adatok[1]), adatok[2], float.Parse(adatok[3]), float.Parse(adatok[4])));
 
 
@@ -41,7 +41,7 @@ namespace Kviz
 
         private void ValasztosFeltolt()
         {
-            FileStream fs = new FileStream("kerdesek.txt", FileMode.Open);
+            FileStream fs = new FileStream(ValasztosFajlnev, FileMode.Open);
             StreamReader sr = new StreamReader(fs);
             string sor;
             List<string> valaszok = new List<string>();
@@ -49,7 +49,6 @@ namespace Kviz
             {
                 sor=sr.ReadLine();
                 string[] adatok = sor.Split(';');
-                //        public Valasztos(byte nehezseg,string kategoria, string kerdesSzoveg,  List<string>valaszok ) 
                 
                 for(int i=3; i < adatok.Length; i++)
                 {

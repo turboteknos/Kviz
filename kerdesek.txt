@@ -1,0 +1,15 @@
+irodalom;1;Hogy hívják Petőfi Sándor feleségét?;Szendrei Júlia;Kalányos Rita;Bogdán Zsanett;Kelemen Róbertné
+történelem;1;Mikor történt trianon?;1920;1917;1905;1823
+földrajz;1;Melyik a legnagyobb bolygó a Naprendszerben?;Jupiter;Szaturnusz;Uránusz;Mars
+irodalom;1;Ki volt Gandalf, A Gyűrűk Ura trilógiában?;Mágus;Hobbit;Törp;Ork
+irodalom;1;Ki írta a Toldit?;Arany János;Petőfi Sándor;József Attila;Kelemen Róbert
+irodalom;2;Mi a görög abc utolsó betűje?;Omega;Szigma;kappa;Cosinusz
+irodalom;2;Ki korán kel, mit lel a közmondás szerint?gyémántot;aranyat;barátot;korházi beutalót
+földrajz;2;Mi az aszteroida?;Válaszok;kisbolygó;csillag;üstökös;kisbolygó
+sport;2;Hányszoros olimpiai bajnok Egerszegi Krisztina?;5;4;6;8
+irodalom;2;Mi rossz tanácsadó a közmondás szerint?;harag;harang;szomszéd;Zénó
+földrajz;3;Milyen hosszú a Balaton?;77km;88km;120km;94km
+földrajz;3;Honnan ered a Duna?;a Fekete erdőből;Ukrajnából;Szlovákiából;é. sz. 47° 29′ 53″, k. h. 19° 02′ 24″ sz. 47° 29′ 53″, k. h. 19° 02′ 24″
+földrajz;3;Mi Bulgária fővárosa?;Burgasz;Szófia;Várna;Ljubljana
+biológia;3;A csigák melyik törzsbe tartoznak?;puhatestűek;ízeltlábúak;gerinchúrosok;gombák
+biológia;3;Mi a vakond fő tápláléka?;giliszta;rovarok;gyümölcsök;Norbi update low carb kakaóscsiga

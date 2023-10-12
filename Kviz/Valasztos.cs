@@ -12,7 +12,7 @@ namespace Kviz
         private List<string> valaszok;
         private byte nehezseg;
 
-        public Valasztos(string kerdesSzoveg, string kategoria, List<string>valaszok, byte nehezseg) 
+        public Valasztos(string kategoria, byte nehezseg, string kerdesSzoveg,  List<string>valaszok ) 
         { 
             this.kerdesSzoveg = kerdesSzoveg;
             this.kategoria = kategoria;
@@ -30,6 +30,14 @@ namespace Kviz
 
         public void valasztas(string kerdesSzoveg,List<string>valaszokSzoveg){
 
+        }
+
+        public List<string> Tartalom()
+        {
+            List<string>x =new List<string>();
+            x.Add(kerdesSzoveg);
+            x.AddRange(valaszok);
+            return x;
         }
     }
 }

@@ -1,0 +1,5 @@
+matematika;1;Hány oldala van egy paralelogrammának?;4;0
+fizika;Hány fokon forr a víz?;100;0
+matematika;Mennyi a háromszög belső szögeinek összege?;180;0
+fizika;Hány watt 1 lóerő?;735;70
+matematika;Mennyi a Pi értéke?(2tizedesig);3,14;0

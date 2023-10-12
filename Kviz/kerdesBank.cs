@@ -8,5 +8,10 @@ namespace Kviz
 {
     internal class kerdesBank
     {
+        FajlbolFeltolto f;
+        public kerdesBank(FajlbolFeltolto f)
+        {
+            this.f = f;
+        }
     }
 }

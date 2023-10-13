@@ -33,6 +33,34 @@ namespace Kviz
                 }
             }
         }
-        
+
+
+        public void KvizOszeallitas(byte darabszam, out List<IKerdes> KerdesSor)
+        {
+            KerdesSor = new List<IKerdes>();
+            //kérdések kiírása darabszámig konzolra
+            
+            
+
+
+        }
+
+        public void KvizOszeallitas(byte darabszam, string kategoria,  out List<IKerdes> KerdesSor)
+        {
+            KerdesSor = new List<IKerdes>();
+            // Ide jöhet a függvény logika
+        }
+
+        public void KvizOszeallitas(byte darabszam, byte nehezseg, out List<IKerdes> KerdesSor)
+        {
+            KerdesSor = new List<IKerdes>();
+            // Ide jöhet a függvény logika
+        }
+
+        public void KvizOszeallitas(byte darabszam, byte nehezseg, string kategoria, out List<IKerdes> KerdesSor)
+        {
+            KerdesSor = new List<IKerdes>();
+            // Ide jöhet a függvény logika
+        }
     }
 }

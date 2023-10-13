@@ -10,7 +10,7 @@
             {
                 Console.WriteLine("Kérem adja meg hány kérdést szeretne a kvízben!");
                 byte darabszam = Convert.ToByte(Console.ReadLine());
-                k.KvizOszeallitas(darabszam, out List<IKerdes> KerdesSor);
+                k.KvizOszeallitas(darabszam);
             }
             else if (FeladatTipusValaszt() == 2)
             {

@@ -35,10 +35,17 @@ namespace Kviz
         }
 
 
-        public void KvizOszeallitas(byte darabszam, out List<IKerdes> KerdesSor)
+        public void KvizOszeallitas(byte darabszam)
         {
-            KerdesSor = new List<IKerdes>();
-            //kérdések kiírása darabszámig konzolra
+            //kérdések kiírása darabszám alapján konzolra
+            foreach (IKerdes k in feladatok)
+            {
+                foreach (string s in k.Tartalom())
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            
             
             
 

@@ -86,7 +86,7 @@ namespace Kviz
 
         public List<IKerdes> KvizOszeallitas(byte darabszam, string kategoria)
         {
-            
+            throw new NotImplementedException();
             
         }
 

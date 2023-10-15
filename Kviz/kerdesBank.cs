@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Kviz
 {
@@ -35,27 +36,58 @@ namespace Kviz
         }
 
 
-        public void KvizOszeallitas(byte darabszam)
+        public List<IKerdes> KvizOszeallitas(byte darabszam)
         {
-            //kérdések kiírása darabszám alapján konzolra
-            foreach (IKerdes k in feladatok)
+            // Számláló, hogy nyomon kövessük hány elemet írtunk ki eddig
+            byte counter = 0;
+
+            // Lista, ami tartalmazza a kiírandó kérdéseket
+            List<IKerdes> Kerdessor = new List<IKerdes>();
+
+            // Véletlenszám-generátor létrehozása
+            Random rng = new Random();
+
+            // Másoljuk a feladatok listát, hogy véletlenszerűen tudjuk kezelni
+            List<IKerdes> feladatokMasolat = new List<IKerdes>(feladatok);
+
+            // kérdések kiírása darabszám alapján konzolra
+            while (feladatokMasolat.Count > 0 && counter < darabszam)
             {
-                foreach (string s in k.Tartalom())
+                // Véletlenszerű index kiválasztása
+                int randomIndex = rng.Next(feladatokMasolat.Count);
+
+                // Kiválasztjuk az adott indexű kérdést
+                IKerdes k = feladatokMasolat[randomIndex];
+
+                List<string> tartalom = k.Tartalom();
+                for (int j = 0; j < tartalom.Count; j++)
                 {
-                    Console.WriteLine(s);
+                    // Ha elérjük a darabszám limitet, kilépünk a ciklusból
+                    if (counter >= darabszam)
+                    {
+                        return Kerdessor;
+                    }
+
+                    Console.WriteLine(tartalom[j]);
+                    counter++;  // Növeljük a számlálót
                 }
+
+                // Hozzáadjuk a kiírt kérdést a Kerdessor listájához
+                Kerdessor.Add(k);
+
+                // Eltávolítjuk a már kiválasztott kérdést a másolat listából
+                feladatokMasolat.RemoveAt(randomIndex);
             }
-            
-            
-            
 
-
+            return Kerdessor;
         }
 
-        public void KvizOszeallitas(byte darabszam, string kategoria,  out List<IKerdes> KerdesSor)
+
+
+        public List<IKerdes> KvizOszeallitas(byte darabszam, string kategoria)
         {
-            KerdesSor = new List<IKerdes>();
-            // Ide jöhet a függvény logika
+            
+            
         }
 
         public void KvizOszeallitas(byte darabszam, byte nehezseg, out List<IKerdes> KerdesSor)

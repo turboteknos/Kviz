@@ -36,7 +36,8 @@ namespace Kviz
 
             }
 
-
+            sr.Close();
+            fs.Close();
         }
 
         private void ValasztosFeltolt()
@@ -61,6 +62,8 @@ namespace Kviz
 
                 k.KerdesFelvesz(new Valasztos(adatok[0], byte.Parse(adatok[1]), adatok[2], valaszok));
             }
+            sr.Close();
+            fs.Close();
 
 
         }

@@ -18,7 +18,7 @@
                 Console.WriteLine("Kérem adja meg a kategóriát!");
                 byte darabszam = Convert.ToByte(Console.ReadLine());
                 string kategoria = Console.ReadLine();
-                k.KvizOszeallitas(darabszam, kategoria, out List<IKerdes> KerdesSor);
+                k.KvizOszeallitas(darabszam, kategoria);
             }
             else if (FeladatTipusValaszt() == 3)
             {
